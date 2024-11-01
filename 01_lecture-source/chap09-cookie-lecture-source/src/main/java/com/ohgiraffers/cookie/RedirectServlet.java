@@ -75,6 +75,16 @@ public class RedirectServlet extends HttpServlet {
         out.flush();
         out.close();
 
+        /* comment.
+        *   쿠키의 경우 text 파일 형태로 클라이언트 컴퓨터에
+        *   저장이 된다. 그렇기 때문에 개인 PC 는 상관이 없지만
+        *   공용 PC 의 경우 탈취 위험에 노출이 된다.
+        *   따라서 민감한 정보는 session 을 이용하게 되며
+        *   session 은 클라이언트 컴퓨터가 아닌
+        *   서버 컴퓨터에(톰켓서버) 에 관리가 되기 때문에
+        *   보안에 더 우수하다.
+        *  */
+
     }
 
 }
